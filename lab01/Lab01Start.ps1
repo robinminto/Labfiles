@@ -54,9 +54,9 @@ $loc = "West US"
 $rgname = "RG-AZITCAMP-LAB01"
 $deploymentname = "Simple-VM"
 $templatefilepath = "C:\LabFiles\..."
-$templatefileURI = "https://raw.githubusercontent.com/..."
+$templatefileURI = "https://raw.githubusercontent.com/robinminto/ARMTemplatesLab/master/101-simple-windows-vm/azuredeploy.json"
 $parameterfilepath = "C:\LabFiles\..."
-$parameterfileURI = "https://raw.githubusercontent.com/..." 
+$parameterfileURI = "https://raw.githubusercontent.com/robinminto/ARMTemplatesLab/master/101-simple-windows-vm/azuredeploy.parameters.json" 
 
 
 
@@ -103,4 +103,4 @@ New-AzureResourceGroup -Name $rgname -Location $loc
 # If you want to deploy a remote template using this script, add values for the $deploymentname, $templatefileURI, and $parametefileURI
 # and uncomment the following line.
 
-# New-AzureResourceGroupDeployment -Name $deploymentname -ResourceGroupName $rgname -TemplateParameterUri $parameterfileURI -TemplateUri $templatefileURI
+New-AzureResourceGroupDeployment -Name $deploymentname -ResourceGroupName $rgname -TemplateParameterUri $parameterfileURI -TemplateUri $templatefileURI
